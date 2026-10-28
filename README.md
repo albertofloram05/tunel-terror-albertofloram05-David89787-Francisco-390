@@ -2,13 +2,13 @@
 
 **Compañero/a:** Francisco. User: Francisco-390
 **Compañero/a:** Alberto Florido. User: albertofloram05
-**Compañero/a:** David Buzón Nogales: User David89787
+**Compañero/a:** David Buzón Nogales. User: David89787
 
 ## La historia
 3-4 líneas.
 
 ## La pista
-Qué pista damos y dónde está escondida.
+La pista esta al pasar el raton por el pergamino, por las palabras resaltadas de rojo que es 3-5-7, tambien se puede encontrar en negrita leyendo el digrama, pero este es mas dificil de entender
 
 
 ## Diario de investigación
@@ -18,7 +18,11 @@ Reto 3: En index.html he añadido un menú de navegación con nav y una lista de
 
 Reto 4 y 5: hemos completado la sección cumpliendo con las espectativas del ejercicio. Hemos incluido la lista ordenada y dentro de ella la desordenada. También hemos puesto el <'strong'> para dar énfasis y probado el código en pruebas.html. También se han añadido las imagenes con las descripciones correspondientes y se han cumplido los objetivos de la tarea
 
-Reto 6: He creado pergamino.html, una segunda página con el mismo esqueleto que index.html, enlazada a css/terror.css y con class="pergamino" en el <body> para que parezca papel viejo. Dentro puse el diario con las cifras 3, 1 y 7 en <strong>. Después la incrusté en index.html con un <iframe> que lleva title para que un lector de pantalla sepa qué contiene.
+Reto 6: He creado pergamino.html, una segunda página con el mismo esqueleto que index.html, enlazada a css/terror.css y con class="pergamino" en el <'body'> para que parezca papel viejo. Dentro puse el diario con las cifras 3, 1 y 7 en <'strong'>. Después la incrusté en index.html con un <'iframe'> que lleva title para que un lector de pantalla sepa qué contiene.
+
+Reto 7: He terminado el pergamino.html con pistas para poder encontrar la contraseña de forma original y divertida, tambien he contestado todo lo que se me preguntaba y corregido todos los fallos y cosas que he encontrado por la pagina
+
+Reto 8: He arreglado los problemas de compilación de la página web index.html y pergamino.html. Luego, he hecho una captura donde se valida el archivo en el validador w3c y he guardado dicha captura en la carpeta docs.
 
 ### Reto 1 y 2 · La voz del narrador
 - **Pregunta:** ¿strong o b para la palabra que asusta?
@@ -71,12 +75,25 @@ Reto 6: He creado pergamino.html, una segunda página con el mismo esqueleto que
 - **Decisión en mi sala:** Uso `<iframe src="pergamino.html">` con `title="El diario del vigilante"` y tamaño 600x400, dentro de una sección con id `pergamino` para poder enlazarla desde el menú.
 - **Pista de nivel usada:** ninguna
 
+### Reto 7 · La pista
+- **Pregunta:** ¿se ve a simple vista? ¿un visitante la encuentra en 1 minuto? ¿encaja con lo que espera el programa de 2.º?
+- **Fuente:** https://developer.mozilla.org/es/docs/Web/HTML/Element/details y <'abbr'> https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/abbr
+- **Lo que dice (con mis palabras):** He usado <'p'><'small'><'abbr'><'/abbr'><'/small'><'/p'> ya que asi es mas facil esconder el codigo de una fomra bonita y original que no todo el mundo podra encontrar.
+- **Prueba en pruebas.html:** Probe dos opciones para esconder el codigo de la caja fuerte
+- **Decisión en mi sala:** Uso <'abbr'> para en el codigo de la caja fuerte porque asi al pasar el raton por encima aparece.
+- **Pista de nivel usada:** Ninguna
 
-
-(repite el mismo esquema hasta el Reto 8)
+### Reto 8 · Valida, README y entrega
+- **Pregunta:** Para cada error que te dé el validador: ¿qué significa y por qué ocurrió? ¿Qué cambiaste para corregirlo?
+- **Fuente:** https://validator.w3.org/
+- **Lo que dice (con mis palabras):** el validador sirve para detectar errores de compilación en un archivo html. Una vez que arreglas los errores, el validador te dice que el archivo es capaz de compilar porque no detecta ningún error.
+- **Prueba en pruebas.html:** se ha podido comprobar que primero daba algún error, pero por suerte no ha compilado
+- **Decisión en mi sala:** uso el validador en "index.html" porque así puedo comprobar si es capaz de compilar.
+- **Pista de nivel usada:** ninguna
 
 ## Captura
-![Mi sala](docs/captura.png)
+![Sala 5](docs/validado.png)
 
 ## Créditos
-Imágenes y sonidos con autor, web y licencia.
+sotano.png --> pixabay.com
+caja.png --> pixabay.com
