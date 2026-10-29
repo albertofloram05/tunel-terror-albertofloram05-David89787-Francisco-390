@@ -7,6 +7,44 @@
     <meta name="author" content="albertofloram05">
     <title>Sala 5 · El sótano del vigilante</title>
     <link rel="stylesheet" href="css/terror.css">
+    <style>
+        /* Imagen del susto */
+        #susto {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            background: #000;
+            pointer-events: none;
+        }
+        #susto.activo { display: flex; }
+        #susto img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            border: none;   /* anula el borde de terror.css */
+            filter: none;   /* anula el gris de terror.css */
+        }
+
+        /* Pantalla parpadeando */
+        #parpadeo {
+            position: fixed;
+            inset: 0;
+            z-index: 10000;
+            pointer-events: none;
+            opacity: 0;
+        }
+        #parpadeo.activo { animation: parpadeo 0.12s steps(1) infinite; }
+        @keyframes parpadeo {
+            0%   { background: #fff; opacity: 0.85; }
+            50%  { background: #000; opacity: 0.7; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            #parpadeo.activo { animation: none; }
+        }
+    </style>
 </head>
 
 <body>
@@ -91,6 +129,26 @@
     <footer>
     <p>Imágenes de <a href="https://pixabay.com" target="_blank" rel="noopener noreferrer">Pixabay</a> · Sala creada por David, Francisco y Alberto para el túnel del terror</p>
 </footer>
+<!-- Susto -->
+    <div id="susto" aria-hidden="true">
+        <img src="img/susto.jpg" alt="">
+    </div>
+    <div id="parpadeo" aria-hidden="true"></div>
+
+    <script>
+        setTimeout(function () {
+            var susto = document.getElementById('susto');
+            var parpadeo = document.getElementById('parpadeo');
+
+            susto.classList.add('activo');
+            parpadeo.classList.add('activo');
+
+            setTimeout(function () {
+                susto.classList.remove('activo');
+                parpadeo.classList.remove('activo');
+            }, 2000);
+        }, 10000);
+    </script>
 </body>
 
 </html>
